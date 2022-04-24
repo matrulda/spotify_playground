@@ -12,7 +12,7 @@ molmed_lists = 0
 
 while playlists:
     for playlist in playlists['items']:
-        if "Molmed" in playlist['name'] or "Fredagslistan" in playlist['name']:
+        if "molmed" in playlist['name'].lower() or "hej då johan" in playlist['name'].lower():
             molmed_lists += 1
             tracks = sp.playlist_tracks(playlist["uri"])["items"]
             for track in tracks:
